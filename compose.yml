@@ -2,8 +2,12 @@ services:
   macos:
     image: dockurr/macos
     container_name: macos
+    privileged: true
     environment:
       VERSION: "13"
+      RAM_SIZE: "86G"
+      CPU_CORES: "16"
+      DISK_SIZE: "256G"
     devices:
       - /dev/kvm
       - /dev/net/tun
